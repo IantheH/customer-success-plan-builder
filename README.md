@@ -4,6 +4,12 @@ A lightweight, interactive, platform-agnostic tool for Customer Success Managers
 
 ---
 
+## Live Demo
+
+[Open the Customer Success Plan Builder](https://iantheh.github.io/customer-success-plan-builder/)
+
+---
+
 ## Purpose
 
 Customer success planning is often inconsistent across teams — some CSMs use decks, others use spreadsheets, and many write plans from scratch for every new account. This tool standardizes the process by turning key customer inputs into a structured, shareable success plan in seconds.
