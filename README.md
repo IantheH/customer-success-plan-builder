@@ -1,6 +1,6 @@
 # Customer Success Plan Builder
 
-A lightweight, platform-agnostic tool for Customer Success Managers and Technical Account Managers to generate structured, professional customer success plans directly in the browser — no backend, no dependencies, no install required.
+A lightweight, interactive, platform-agnostic tool for Customer Success Managers and Technical Account Managers to generate structured, professional customer success plans directly in the browser — no backend, no dependencies, no install required.
 
 ---
 
@@ -8,7 +8,7 @@ A lightweight, platform-agnostic tool for Customer Success Managers and Technica
 
 Customer success planning is often inconsistent across teams — some CSMs use decks, others use spreadsheets, and many write plans from scratch for every new account. This tool standardizes the process by turning key customer inputs into a structured, shareable success plan in seconds.
 
-It is designed as a Customer Success and Technical Account Management portfolio project to demonstrate practical knowledge of customer onboarding strategy, adoption planning, stakeholder alignment, and value realization.
+This is a Customer Success and Technical Account Management portfolio project that shows how customer goals can be turned into onboarding plans, adoption priorities, stakeholder alignment, technical workflow needs, risk mitigation, and measurable business value.
 
 ---
 
@@ -18,7 +18,7 @@ It is designed as a Customer Success and Technical Account Management portfolio 
 FlowPilot CRM is a fictional CRM and workflow automation platform for small and mid-sized service businesses. It helps teams manage contacts, automate follow-up, track stakeholder activity, and improve visibility across customer workflows.
 
 **Sample Customer: PeopleFirst HR Partners**
-PeopleFirst HR Partners is a growing HR consulting firm that helps small and mid-sized companies with recruiting support, employee onboarding, compliance reminders, and HR advisory services. They are adopting FlowPilot CRM to replace manual spreadsheet tracking, automate client follow-up, and gain visibility into open HR workflows.
+PeopleFirst HR Partners is a growing HR consulting firm that provides recruiting support, employee onboarding, compliance reminders, and HR advisory services to small and mid-sized companies. They are adopting FlowPilot CRM to replace manual spreadsheet tracking, automate client follow-up, and gain visibility into open HR workflows.
 
 Click **Load Sample Data** in the app to populate the form with this scenario and generate a full plan instantly.
 
@@ -33,7 +33,7 @@ Click **Load Sample Data** in the app to populate the form with this scenario an
 - **Generate Success Plan** — produces a structured 9-section plan from your inputs
 - **Copy to Clipboard** — paste the plan into any CRM, email, or document tool
 - **Download as Markdown** — save a `.md` file for offline use or version control
-- **Clear Form** — reset all inputs and output with one click
+- **Clear Form** — reset all inputs and outputs with one click
 - **Mobile responsive** — works on desktop, tablet, and phone
 - **No dependencies** — open `index.html` directly in any browser, no server needed
 
@@ -59,14 +59,25 @@ Every generated plan includes:
 
 ## How to Use
 
-1. Open `index.html` in any modern browser
-2. Fill in the customer details form, or click **Load Sample Data** to use the demo scenario
-3. Click **Generate Success Plan**
-4. Review the plan in the output panel
-5. Use **Copy to Clipboard** or **Download .md** to share or save the plan
+### Live Demo
+
+Open the live demo here:
+
+[Customer Success Plan Builder](https://iantheh.github.io/customer-success-plan-builder/)
+
+### Using the App
+
+1. Open the live demo link.
+2. Fill in the customer details form, or click **Load Sample Data** to use the PeopleFirst HR Partners demo scenario.
+3. Click **Generate Success Plan**.
+4. Review the plan in the output panel.
+5. Use **Copy to Clipboard** or **Download .md** to share or save the plan.
 
 Required fields: Customer Name, Primary Contact, and Business Goals. All other fields are optional but improve plan quality.
 
+### Local Use
+
+To run locally, download the repository and open `index.html` in any modern browser.
 ---
 
 ## Project Files
