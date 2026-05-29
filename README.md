@@ -100,7 +100,7 @@ This project demonstrates a working knowledge of the Customer Success function:
 
 - **Customer success planning** — Translating business goals into a structured, time-bound engagement plan
 - **SaaS onboarding strategy** — The 30/60/90-day framework reflects common SaaS onboarding practice: Foundation → Expansion → Value Realization
-- **Product adoption planning** — Surfacing use cases, first-value milestones, and adoption risks shows awareness that adoption is not automatic — it requires intentional planning and monitoring
+- **Product adoption planning** — Surfacing use cases, first-value milestones, and adoption risks shows awareness that adoption is not automatic — it requires planning and monitoring
 - **Stakeholder alignment** — Mapping executive sponsors, technical owners, and internal champions reflects the multi-threaded relationship management needed to reduce dependency on a single contact and support stronger account health
 - **Risk identification** — Naming adoption blockers early (change resistance, unclear ownership, process gaps) demonstrates proactive risk management rather than reactive firefighting
 - **Success metrics definition** — Tying metrics to business outcomes rather than just product usage shows maturity in the CS practice
