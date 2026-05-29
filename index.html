@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Success Plan Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logo">🎯</div>
+    <div class="header-text">
+      <h1>Customer <em>Success</em> Plan Builder</h1>
+      <p>Generate structured success plans for customer onboarding and adoption</p>
+    </div>
+    <div class="header-badge">Platform-Agnostic · No Backend</div>
+  </div>
+</header>
+
+<!-- ── Main ────────────────────────────────────────────────── -->
+<main class="main-layout">
+
+  <!-- LEFT: Input Form -->
+  <section class="panel" aria-label="Customer Details Form">
+    <div class="panel-header">
+      <div class="panel-icon">📋</div>
+      <div>
+        <div class="panel-title">Customer Details</div>
+        <div class="panel-subtitle">Fill in the fields below to generate a success plan</div>
+      </div>
+    </div>
+
+    <!-- Sample Data Banner -->
+    <div class="sample-banner">
+      <div class="sample-banner-text">
+        <strong>Try the demo scenario</strong>
+        <span>PeopleFirst HR Partners adopting FlowPilot CRM</span>
+      </div>
+      <button class="btn btn-ghost btn-sm" onclick="loadSample()" type="button">
+        <span class="btn-icon">🗂</span> Load Sample Data
+      </button>
+    </div>
+
+    <form id="cs-form" novalidate>
+      <div class="form-grid">
+
+        <!-- Row 1 -->
+        <div class="field">
+          <label for="field-customerName">Customer Name <span class="required">*</span></label>
+          <input
+            type="text"
+            id="field-customerName"
+            placeholder="e.g. Acme Corp"
+            autocomplete="organization"
+          />
+        </div>
+
+        <div class="field">
+          <label for="field-customerIndustry">Customer Industry</label>
+          <input
+            type="text"
+            id="field-customerIndustry"
+            placeholder="e.g. HR Consulting, FinTech, Healthcare"
+          />
+        </div>
+
+        <!-- Row 2 -->
+        <div class="field full">
+          <label for="field-primaryContact">Primary Contact <span class="required">*</span></label>
+          <input
+            type="text"
+            id="field-primaryContact"
+            placeholder="e.g. Dana Okafor, Director of Client Operations"
+          />
+        </div>
+
+        <!-- Stakeholders -->
+        <div class="field full">
+          <label for="field-stakeholders">Key Stakeholders</label>
+          <textarea
+            id="field-stakeholders"
+            placeholder="List stakeholders and their roles, e.g.&#10;• Dana Okafor (Dir. of Operations) — Executive Sponsor&#10;• Marcus Webb (Senior Consultant) — Internal Champion&#10;• Priya Nair (Ops Coordinator) — Admin & Workflow Owner"
+          ></textarea>
+        </div>
+
+        <!-- Business Goals -->
+        <div class="field full">
+          <label for="field-businessGoals">Business Goals <span class="required">*</span></label>
+          <textarea
+            id="field-businessGoals"
+            placeholder="What outcomes does the customer want to achieve?&#10;e.g.&#10;• Improve follow-up consistency with clients&#10;• Automate reminders for missing documents&#10;• Reduce manual spreadsheet tracking"
+          ></textarea>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="field full">
+          <label for="field-useCases">Main Use Cases</label>
+          <textarea
+            id="field-useCases"
+            placeholder="Which features or workflows will the team use most?&#10;e.g.&#10;• Automated onboarding follow-up workflows&#10;• Centralized contact and activity log&#10;• Dashboard visibility into open tasks"
+          ></textarea>
+        </div>
+
+        <!-- First Value -->
+        <div class="field full">
+          <label for="field-firstValue">First-Value Milestone</label>
+          <input
+            type="text"
+            id="field-firstValue"
+            placeholder="e.g. First 25 records tracked through an automated workflow within 30 days"
+          />
+        </div>
+
+        <!-- Adoption Risks -->
+        <div class="field full">
+          <label for="field-adoptionRisks">Adoption Risks</label>
+          <textarea
+            id="field-adoptionRisks"
+            placeholder="What could slow or block adoption?&#10;e.g.&#10;• Inconsistent CRM usage across the team&#10;• Manual tracking habits from spreadsheets&#10;• Unclear workflow ownership"
+          ></textarea>
+        </div>
+
+        <!-- Success Metrics -->
+        <div class="field full">
+          <label for="field-successMetrics">Success Metrics</label>
+          <textarea
+            id="field-successMetrics"
+            placeholder="How will success be measured?&#10;e.g.&#10;• Follow-up completion rate ≥ 85% by Day 60&#10;• 25+ records tracked through a workflow by Day 30&#10;• NPS ≥ 45 at 90-day check-in"
+          ></textarea>
+        </div>
+
+        <!-- Row: Date + CSM -->
+        <div class="field">
+          <label for="field-reviewDate">Next Review Date</label>
+          <input type="date" id="field-reviewDate" />
+        </div>
+
+        <div class="field">
+          <label for="field-csmName">CSM / TAM Name</label>
+          <input
+            type="text"
+            id="field-csmName"
+            placeholder="Your name"
+            autocomplete="name"
+          />
+        </div>
+
+      </div><!-- /form-grid -->
+
+      <div class="form-actions" id="form-actions">
+        <button type="button" class="btn btn-primary" onclick="generatePlan()">
+          <span class="btn-icon">⚡</span> Generate Success Plan
+        </button>
+        <button type="button" class="btn btn-danger btn-sm" onclick="clearForm()">
+          <span class="btn-icon">🗑</span> Clear Form
+        </button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- RIGHT: Output -->
+  <section class="panel output-sticky" id="output-panel" aria-label="Generated Success Plan">
+    <div class="panel-header">
+      <div class="panel-icon">📄</div>
+      <div>
+        <div class="panel-title">Success Plan Output</div>
+        <div class="panel-subtitle">Your generated plan will appear here</div>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div class="output-placeholder" id="output-empty">
+      <div class="placeholder-graphic">🗺️</div>
+      <h3>No plan generated yet</h3>
+      <p>Fill in the customer details and click <strong>Generate Success Plan</strong> to build a structured 30/60/90-day success plan.</p>
+    </div>
+
+    <!-- Plan output -->
+    <div id="plan-content">
+      <pre id="plan-text" aria-label="Generated success plan text"></pre>
+      <div class="output-actions">
+        <button class="btn btn-gold btn-sm" onclick="copyPlan()" type="button">
+          <span class="btn-icon">📋</span> Copy to Clipboard
+        </button>
+        <button class="btn btn-success btn-sm" onclick="downloadMarkdown()" type="button">
+          <span class="btn-icon">⬇️</span> Download .md
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Toast notification -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <strong>Customer Success Plan Builder</strong> &mdash;
+  Platform-agnostic &middot; No backend &middot; Works offline &middot;
+  Sample scenario: FlowPilot CRM &amp; PeopleFirst HR Partners (fictional)
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
