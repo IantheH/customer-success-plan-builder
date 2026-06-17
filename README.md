@@ -112,3 +112,15 @@ customer-success-plan-builder/
 ├── styles.css    — Visual design and responsive layout
 ├── script.js     — Plan generation logic, sample data, and interactivity
 └── README.md     — Project documentation
+
+## Usage Notice
+
+© 2026 Ianthe Hernandez. All rights reserved.
+
+This repository is publicly available for portfolio review, recruiter evaluation, professional discussion, and demonstration purposes only.
+
+No permission is granted to copy, modify, adapt, redistribute, republish, commercialize, incorporate into another project, or present the content, structure, templates, or framework as your own.
+
+Written permission from Ianthe Hernandez is required for any reuse, modification, redistribution, publication, commercial use, or derivative work.
+
+Public access to this repository does not constitute permission to use the content, structure, templates, or framework.
